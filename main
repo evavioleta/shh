@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHHH!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Pantalla de intro --- */
+        #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            overflow: hidden;
+            animation: fadeOut 3s ease 3s forwards;
+        }
+
+        #intro video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #contenido {
+            opacity: 0;
+            animation: showContent 1s ease 6s forwards;
+        }
+
+        #glitch {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            z-index: -10;
+            visibility: visible;
+        }
+
+        /* --- Animaciones --- */
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes showContent {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo del menú */
+        nav {
+            background-color: #2dff0d;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(32, 89, 143, 0.2);
+            position: sticky;
+            top: 0; /* Hace que se quede fijo en la parte superior */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            width: 100%;
+        }
+
+        .menu-item {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-family: "Quantico", sans-serif;
+            font-weight: 700;
+            font-style: normal; 
+            color: #040115;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #a9fa12;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(124, 162, 2, 0.3);
+        }
+
+        p {
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: "Quantico", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            color: #ffffff;
+            font-size: 90px;
+            margin: 20px;
+        }
+
+        h2 {
+            font-family: "Quantico", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            color: #000000;
+            font-size: 30px;
+            margin: 20px;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       /* Secciones */
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        .gradient-box {
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #a9fa12 10%, #ffffff 80%);
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1)
+        }
+        
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <!-- Intro UwU-->
+    <div id="intro">
+        <video autoplay muted playsinline>
+            <source src="video/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Aqui esta todo -->
+    <div id="contenido">
+
+        <video src="video/glitch.mp4" autoplay muted="mute" loop id="glitch"></video>
+
+        <div style="margin-bottom: 100px;" id="inicio">
+            <img src="img/SHHH logo final.png" style=" margin-top: 80px; margin-left: auto;margin-right: auto;text-align: center ; display: flex; width: 500px; height: auto;">
+            <h1>SHHH!</h1>
+            <p>Ya tengo tu ubicación</p>
+        </div>
+
+        <!-- Menu -->
+        <nav>
+            <a href="#inicio" class="menu-item">Inicio</a>
+            <a href="#top3" class="menu-item">Top 3</a>
+            <a href="#programas" class="menu-item">Programas</a>
+            <a href="#tipografias" class="menu-item">Tipografías</a>
+            <a href="#nosotros" class="menu-item">Nosotros</a>
+            <a href="#contacto" class="menu-item">Contacto</a>
+        </nav>
+
+        <section id="top3" style="background-color: #000000; width: 100%;">
+            <h1>Top 3</h1>
+            <div class="responsive-img">
+            <img src="img/Recurso 8.svg" style="width: 70%;">
+            </div>
+        </section>
+
+        <div id="programas">
+            <h1>Programas</h1>
+            <img src="video/Warning.gif" class="responsive-img" style="width: 100%;height: auto;">
+            <article class="col-md-4">
+            <img src="img/Ae.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Id.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Filmora.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/CD.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Ai.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Ps.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/4d.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Office.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Word.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Excel.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/PP.svg" style="width: 300px; height: auto;padding: 20px;">
+            <img src="img/Maya.svg" style="width: 300px; height: auto;padding: 20px;">
+            </article>
+            
+        </div>
+
+        <div id="tipografias">
+            <h1>Tipografías</h1>
+            <div class="gradient-box">
+
+            </divclass>
+        </div>
+    <div>
+        <video controls class="responsive-img">
+            <source src="video/Edson.mp4" type="video/mp4">
+        </video>
+    </div>    
+    </div>
+        <div id="nosotros">
+            <section>
+                <h1 style="color: #000000;">Nosotros</h1>
+            </section>
+        </div>
+     
+
+        <footer style="text-align:center; padding:20px; background-color: #a9fa12; ">
+            <h2>Tenemos tu ubicación</h2>
+        </footer>
+    </div>
+</body>
+</html>
