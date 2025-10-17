@@ -48,6 +48,13 @@
 
         }
 
+        /* Distribución de los botones */
+        #btn1 { top: 150%; left: 10%; }   /* en el top3 */
+        #btn2 { top: 450%; left: 85%; }   /* en tipo built titling */
+        #btn3 { top: 600%; left: 20%; }   /* en el hombro de edson */
+        #btn4 { top: 720%; left: 75%; }  /* en nosotros en el texto */
+        #btn5 { top: 800%; left: 50%; }  /* cerca del footer */
+
         /* --- Animaciones --- */
         @keyframes fadeOut {
             to {
@@ -146,8 +153,19 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.1)
         }
         
-    </style>
-</head>
+      /* --- BOTONES SECRETOS --- */
+        .hidden-btn {
+            position: absolute;
+            width: 40px; 
+            height: 40px;
+            opacity: 0; /* invisible */
+            cursor: pointer;
+            z-index: 99999; /* sobre todo */
+            border: 1px solid red;
+            opacity: 0.3;
+        }
+            </style>
+        </head>
 
 <body style="background-color: black;">
     <!-- Intro UwU-->
@@ -158,6 +176,13 @@
     </div>
 
     <!-- Aqui esta todo -->
+         <!-- BOTONES SECRETOS -->
+        <a href="img/expo/diagrama_flujo.jpeg" class="hidden-btn" id="btn1" title="shhh1"></a>
+        <a href="img/expo/bocetos_fisicos.png" class="hidden-btn" id="btn2" title="shhh2"></a>
+        <a href="img/expo/wireframes_estaticos.png" class="hidden-btn" id="btn3" title="shhh3"></a>
+        <a href="img/expo/mapa_pagina.pdf" class="hidden-btn" id="btn4" title="shhh4"></a>
+        <a href="img/expo/wireframes_finos_mockup.jpg" class="hidden-btn" id="btn5" title="shhh5"></a>
+
     <div id="contenido">
 
         <video src="video/Glitch2.mp4" autoplay muted="mute" loop id="glitch"></video>
